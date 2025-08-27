@@ -313,6 +313,31 @@
         .lounge-carousel .swiper-slide img {
             cursor: pointer;
         }
+
+        .eternacast-carousel {
+    padding-bottom: 40px;
+}
+
+.eternacast-pagination.swiper-pagination-bullets {
+    bottom: 8px;
+}
+
+/* Regra CRÍTICA para o desktop */
+@media (min-width: 1024px) {
+    .eternacast-carousel {
+        padding-bottom: 0;
+    }
+    
+    /* Faz o wrapper do swiper "desaparecer" para o layout, 
+       permitindo que o grid do container pai afete os slides diretamente. */
+    .eternacast-carousel .swiper-wrapper {
+        display: contents;
+    }
+
+    .eternacast-pagination {
+        display: none;
+    }
+}
     </style>
 </head>
 
@@ -542,6 +567,73 @@
                 </div>
             </div>
         </section>
+
+        <section id="eternacast" style="background-color: #08332a;" class="py-12 md:py-16">
+    <div class="container mx-auto px-6 lg:px-8">
+        
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="flex items-center justify-center gap-4 mb-4">
+                <img src="eternacasticon.png" alt="Ícone EternaCast" class="h-28 md:h-32"" style="filter: brightness(1.2);"> 
+                <h2 class="text-4xl md:text-5xl font-bold">
+                    <span style="color: #c5a365;">Eterna</span><span style="color: #F7F4ED;">Cast</span>
+                </h2>
+            </div>
+            <p class="mt-4 text-lg leading-relaxed" style="color: #F7F4ED;">
+                Acompanhe nossas atualizações e insights semanais do mercado financeiro para tomar decisões de investimento mais informadas e seguras.
+            </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+            
+            <div class="scroll-item lg:col-span-7">
+                <div class="relative w-full overflow-hidden rounded-lg shadow-2xl aspect-video">
+                    <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/LxkivrIAs5w" title="EternaCast YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="scroll-item lg:col-span-5">
+    <h3 class="text-2xl md:text-3xl font-bold mb-6 text-center lg:text-left" style="color: #c5a365;">Episódios Anteriores</h3>
+
+
+    <div class="swiper eternacast-carousel lg:grid lg:grid-cols-3 lg:gap-4">
+        <div class="swiper-wrapper">
+            <a href="https://www.youtube.com/watch?v=Rwm20X36qd0" target="_blank" rel="noopener noreferrer" class="swiper-slide block group text-left">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="1thumb.jpg" alt="Dr. Filipe Souza - Os Pilares da Carreira e Pós-Carreira de Atletas" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <p class="mt-2 text-sm font-semibold leading-tight" style="color: #F7F4ED;">Dr. Filipe Souza - Os Pilares da Carreira e Pós-Carreira de Atletas</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=Bum9llvdg3E" target="_blank" rel="noopener noreferrer" class="swiper-slide block group text-left">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="2thumb.jpg" alt="Glenda Ferreira – Ativos isentos com a Sparta Investimentos" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <p class="mt-2 text-sm font-semibold leading-tight" style="color: #F7F4ED;">Glenda Ferreira – Ativos isentos com a Sparta Investimentos</p>
+            </a>
+            <a href="https://www.youtube.com/watch?v=lK-Djhbg2pM" target="_blank" rel="noopener noreferrer" class="swiper-slide block group text-left">
+                <div class="overflow-hidden rounded-lg">
+                    <img src="3thumb.jpg" alt="Fabio Rosochansky - O Papel do Planejamento Financeiro nas Viagens que valem o investimento" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                </div>
+                <p class="mt-2 text-sm font-semibold leading-tight" style="color: #F7F4ED;">Fabio Rosochansky - Planejamento Financeiro para Viagens</p>
+            </a>
+        </div>
+        <div class="swiper-pagination eternacast-pagination"></div>
+    </div>
+
+    <div class="mt-8 flex flex-col sm:flex-row gap-4">
+        <a href="https://www.youtube.com/@eternacapital" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-6 py-3 bg-black/20 text-white font-semibold rounded-lg hover:bg-black/40 hover:border-[#c5a365] transition-all duration-300 border border-transparent">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+            <span>Watch on YouTube</span>
+        </a>
+        <a href="https://open.spotify.com/show/73ONwoNrQtzGhzx8NIKts5?si=093f0701aa2e4212" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 px-6 py-3 bg-black/20 text-white font-semibold rounded-lg hover:bg-black/40 hover:border-[#c5a365] transition-all duration-300 border border-transparent">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.823 16.949c-.225.352-.675.465-1.028.24-2.61-1.624-5.865-1.98-9.842-1.087-.435.1-.862-.15-.962-.585-.1-.435.15-.862.585-.962 4.335-.99 7.89-0.585 10.74 1.14.352.225.465.675.24 1.028zm1.32-3.134c-.277.435-.84.577-1.29.3-3.15-1.95-7.92-2.4-11.4-1.32-.487.15-.99-.12-1.14-.607-.15-.488.12-.99.608-1.14 3.84-1.17 8.94-.66 12.45 1.5.435.277.577.84.3 1.29-.015.015-.015.015 0 .012zm.12-3.264C15.3 8.54 9.84 8.34 6.75 9.345c-.525.165-1.05-.15-1.215-.675-.165-.525.15-1.05.675-1.215 3.45-1.08 9.525-.87 13.05 1.29.51.315.69.93.375 1.44-.315.51-.93.69-1.44.375z"></path></svg>
+            <span>Listen on Spotify</span>
+        </a>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
         <section id="selos-e-premiacoes" class="relative py-16 md:py-24 bg-cover bg-center bg-fixed" style="background-image: url('city-background.png');">
             <div class="absolute inset-0 bg-[#F7F4ED]/90"></div>
             <div class="relative container mx-auto px-6 lg:px-8">
@@ -1080,7 +1172,49 @@
                 });
             }
         });
+        // Inicialização do Carrossel do EternaCast
+const eternacastCarousel = new Swiper('.eternacast-carousel', {
+    enabled: window.innerWidth < 1024,
+    
+    // ATUALIZAÇÃO 1: Loop ativado para rotação contínua
+    loop: true, 
+
+    // ATUALIZAÇÃO 2: Configuração da rotação automática
+    autoplay: {
+        delay: 3000, // Tempo de 3 segundos entre cada slide
+        disableOnInteraction: false, // A rotação continua mesmo se o usuário navegar manualmente
+        pauseOnMouseEnter: true, // Pausa a rotação se o cursor do mouse estiver sobre o carrossel
+    },
+
+    pagination: {
+        el: '.eternacast-pagination',
+        clickable: true,
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 2,
+            spaceBetween: 16,
+        },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 16,
+        }
+    },
+    on: {
+        resize: function () {
+            if (window.innerWidth < 1024) {
+                this.enable();
+                this.autoplay.start(); // Garante que o autoplay inicie
+            } else {
+                this.disable();
+                this.autoplay.stop(); // Garante que o autoplay pare no desktop
+                this.slideTo(0, 0, false); 
+            }
+        }
+    }
+});
     </script>
+
     </body>
 
 </html>

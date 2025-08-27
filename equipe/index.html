@@ -239,7 +239,7 @@
             <div id="slider-content" class="flex items-center justify-center">
                 <div class="text-center px-4">
                     <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight entrada-titulo">
-                        Conheça Nossos <span class="text-[#c5a365]">Especialistas</span>
+                        Conheça Nossa <span class="text-[#c5a365]">Equipe</span>
                     </h1>
                     <div class="w-24 h-1 bg-[#c5a365] mx-auto my-6 rounded entrada-subtitulo"></div>
                     <p class="text-lg text-white max-w-3xl mx-auto opacity-90 entrada-subtitulo">
@@ -365,45 +365,9 @@
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-     <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             
-            // --- CÓDIGO NOVO PARA O MENU MOBILE ---
-            const mobileMenuButton = document.getElementById('mobile-menu-button');
-            const mobileMenu = document.getElementById('mobile-menu');
-            const menuIconOpen = document.getElementById('menu-icon-open');
-            const menuIconClose = document.getElementById('menu-icon-close');
-
-            mobileMenuButton.addEventListener('click', () => {
-                // Adiciona ou remove a classe 'is-open' para mostrar/esconder o menu
-                mobileMenu.classList.toggle('is-open');
-                
-                // Alterna a visibilidade dos ícones de abrir/fechar
-                menuIconOpen.classList.toggle('hidden');
-                menuIconClose.classList.toggle('hidden');
-
-                // Atualiza o atributo de acessibilidade
-                const isExpanded = mobileMenu.classList.contains('is-open');
-                mobileMenuButton.setAttribute('aria-expanded', isExpanded);
-            });
-
-            // --- CÓDIGO NOVO PARA O DISCLAIMER DO RODAPÉ ---
-            const toggleDisclaimerButton = document.getElementById('toggle-disclaimer');
-            const disclaimerContent = document.getElementById('disclaimer-content');
-            const disclaimerArrow = document.getElementById('disclaimer-arrow');
-            
-            // Só adiciona o evento se o botão existir (ele só existe no mobile)
-            if (toggleDisclaimerButton) {
-                toggleDisclaimerButton.addEventListener('click', () => {
-                    // Adiciona ou remove a classe 'is-open' para expandir/recolher o texto
-                    disclaimerContent.classList.toggle('is-open');
-                    // Adiciona ou remove a classe 'is-open' para girar a seta
-                    disclaimerArrow.classList.toggle('is-open');
-                });
-            }
-
-
-            // --- SEU CÓDIGO EXISTENTE (SEM MUDANÇAS) ---
             const slides = document.querySelectorAll('.slider-image');
             let currentSlide = 0;
             const slideInterval = 5000;
@@ -548,6 +512,6 @@
                 console.error("Erro ao buscar dados do Firebase: ", error);
             });
         });
-    </script></script>
+    </script>
 </body>
 </html>
