@@ -152,13 +152,54 @@
             animation: entradaSuave 1.2s ease-out 0.5s backwards;
         }
         .entrada-subtitulo {
-            /* A mesma animação, mas com um delay maior para entrar depois */
             animation: entradaSuave 1.2s ease-out 0.8s backwards;
         }
+
+        /* --- ESTILOS PARA A SEÇÃO TRABALHE CONOSCO --- */
+        #trabalhe-conosco {
+    position: relative;
+    background-image: url('/equipe/titulo2.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+#trabalhe-conosco::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Um tom de dourado mais escuro e opaco para dar contraste */
+    background-color: rgba(140, 110, 65, 0.92); 
+    z-index: 1;
+}
+.container-trabalhe {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* Ajustes para o texto e botão em branco */
+#trabalhe-conosco h2,
+#trabalhe-conosco p {
+    color: white;
+}
+#trabalhe-conosco a {
+    color: white;
+    border-color: white; /* Borda branca fica ótima aqui */
+}
+#trabalhe-conosco a:hover {
+    color: rgb(140, 110, 65);
+    background-color: white;
+}
     </style>
 </head>
 
-<body class="bg-[#F7F4ED]">
+<body class="bg-[F7F4ED]">
 
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 shadow-lg" style="background-color: rgba(1, 26, 22, 0.9); backdrop-filter: blur(8px);">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -171,7 +212,7 @@
                 <nav class="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 items-center space-x-6">
                     <a href="/quem-somos/" class="text-sm font-medium text-white hover:text-[#c5a365] transition-colors duration-300">Quem somos</a>
                     <a href="/equipe/" class="text-sm font-medium text-[#c5a365] transition-colors duration-300">Equipe</a>
-                    <a href="#" class="text-sm font-medium text-white hover:text-[#c5a365] transition-colors duration-300">Investimentos</a>
+                    <a href="/fundos-de-investimentos/" class="text-sm font-medium text-white hover:text-[#c5a365] transition-colors duration-300">Investimentos</a>
                     <a href="#" class="text-sm font-medium text-white hover:text-[#c5a365] transition-colors duration-300">Soluções PJ</a>
                     <a href="#" class="text-sm font-medium text-white hover:text-[#c5a365] transition-colors duration-300">Seguros</a>
                     <a href="#" class="text-sm font-medium text-white hover:text-[#c5a365] transition-colors duration-300">Private</a>
@@ -202,7 +243,7 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="/quem-somos/" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#c5a365] hover:bg-white/10">Quem somos</a>
                 <a href="/equipe/" class="block px-3 py-2 rounded-md text-base font-medium text-[#c5a365] bg-white/10">Equipe</a>
-                <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#c5a365] hover:bg-white/10">Investimentos</a>
+                <a href="/fundos-de-investimentos/" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#c5a365] hover:bg-white/10">Investimentos</a>
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#c5a365] hover:bg-white/10">Soluções PJ</a>
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#c5a365] hover:bg-white/10">Seguros</a>
                 <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-[#c5a365] hover:bg-white/10">Private</a>
@@ -294,6 +335,22 @@
 
             </div>
         </section>
+
+        <section id="trabalhe-conosco" class="py-20 md:py-28 efeito-scroll">
+            <div class="container-trabalhe">
+                <h2 class="text-3xl md:text-4xl font-bold text-[#08332a]">
+                    Trabalhe Conosco
+                </h2>
+                <p class="mt-4 text-lg text-gray-800 max-w-xl mx-auto">
+                    Envie seu currículo e trabalhe com uma equipe de primeira linha.
+                </p>
+                <div class="mt-8">
+                    <a href="#" class="inline-block text-base font-medium text-[#08332a] border-2 border-[#c5a365] rounded-md px-8 py-3 hover:bg-[#c5a365] hover:text-[#08332a] transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1">
+                        Quero fazer parte do time Eterna Capital
+                    </a>
+                </div>
+            </div>
+        </section>
     
     </main>
 
@@ -325,7 +382,7 @@
                 <div class="text-center md:text-left">
                     <h3 class="text-lg font-bold tracking-wider uppercase" style="color: #c5a365;">Onde Estamos</h3>
                     <div class="mt-4 space-y-2 text-gray-300">
-                        <p>Alameda Terracota, n.o 185</p>
+                        <p>Alameda Terracota, N°185</p>
                         <p>Conjunto. 1.112, 1.113 e 1.114</p>
                         <p>Cerâmica – São Caetano do Sul/SP</p>
                         <p>CEP 09531-190</p>
@@ -405,8 +462,8 @@
             function observarElementos() {
                 const elementosParaAnimar = document.querySelectorAll('.efeito-scroll');
                 elementosParaAnimar.forEach(el => {
+                    observer.observe(el);
                     if(el.classList.contains('titulo-secao')) {
-                        observer.observe(el);
                     }
                 });
                 const secoesDeCards = document.querySelectorAll('.swiper-wrapper'); 
@@ -428,7 +485,7 @@
                         </div>
                         <div class="flex flex-col flex-grow p-4 text-center">
                             <h3 class="text-lg font-bold text-[#08332a]">${pessoa.NOME}</h3>
-                            <p class="text-sm font-semibold text-[#c5a365] h-6">${pessoa.INFORMAÇÃO || ''}</p>
+                            <p class="text-sm font-semibold text-[#c5a365] min-h-6">${pessoa.INFORMAÇÃO || ''}</p>
                             <div class="flex justify-center space-x-4 my-3">
                                 ${pessoa.EMAIL ? `<a href="mailto:${pessoa.EMAIL}" aria-label="Email"><svg class="w-5 h-5 text-gray-600 hover:text-[#08332a]" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg></a>` : ''}
                                 ${pessoa.LINKEDIN ? `<a href="${pessoa.LINKEDIN}" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="w-5 h-5 text-gray-600 hover:text-[#08332a]" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"></path></svg></a>` : ''}
@@ -512,6 +569,34 @@
                 console.error("Erro ao buscar dados do Firebase: ", error);
             });
         });
+        // --- Lógica para o Menu Mobile (Sanduíche) ---
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+
+            if (mobileMenuButton) {
+                mobileMenuButton.addEventListener('click', () => {
+                    const isOpen = mobileMenu.classList.toggle('is-open');
+                    mobileMenuButton.setAttribute('aria-expanded', isOpen);
+                    
+                    // Alterna a visibilidade dos ícones de abrir/fechar
+                    menuIconOpen.classList.toggle('hidden', isOpen);
+                    menuIconClose.classList.toggle('hidden', !isOpen);
+                });
+            }
+
+            // --- Lógica para o Aviso Legal (Disclaimer) ---
+            const toggleDisclaimerButton = document.getElementById('toggle-disclaimer');
+            const disclaimerContent = document.getElementById('disclaimer-content');
+            const disclaimerArrow = document.getElementById('disclaimer-arrow');
+
+            if (toggleDisclaimerButton) {
+                toggleDisclaimerButton.addEventListener('click', () => {
+                    disclaimerContent.classList.toggle('is-open');
+                    disclaimerArrow.classList.toggle('is-open');
+                });
+            }
     </script>
 </body>
 </html>
